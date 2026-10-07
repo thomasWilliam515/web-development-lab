@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Төрийн албан хаагчийн анкет</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+</head>
 <body>
-
     <header>
         <h1>ТӨРИЙН АЛБАН ХААГЧИЙН АНКЕТ</h1>
         <nav>
@@ -17,100 +21,145 @@
         </nav>
     </header>
     <main>
-        <article>
-            <section>
-                <h2>Маягт 1: "А ХЭСЭГ"</h2>
-                <p>Доорх формын дагуу мэдээллээ бүрэн, үнэн зөв бөглөнө үү.</p>
+        <div class="form-container">
+            <div class="form-section">
+                    <h2>Маягт 1: "А ХЭСЭГ"</h2>
+                    <p class="subtitle">Доорх формын дагуу мэдээллээ бүрэн, үнэн зөв бөглөнө үү.</p>
                 <form action="#" method="POST" enctype="multipart/form-data">
-                    <fieldset>
-                        <legend>Нэг. Хувийн мэдээлэл</legend>
-                        <label for="avatar">Цээж зураг (4x6 см):</label><br>
-                        <input type="file" id="avatar" name="avatar" accept="image/*"><br><br>
-                        <label for="register">Регистрийн дугаар:</label><br>
-                        <input type="text" id="register" name="register" required pattern="[А-Яа-яӨөҮү]{2}[0-9]{8}" placeholder="УУ99010112"><br><br>
-                        <label for="lastname">Эцэг (Эх)-ийн нэр:</label><br>
-                        <input type="text" id="lastname" name="lastname" minlength="3" pattern="[A-Za-zА-Яа-яӨөҮү\s]{3,}" required><br><br>
-                        <label for="firstname">Өөрийн нэр:</label><br>
-                        <input type="text" id="firstname" name="firstname" minlength="3" pattern="[A-Za-zА-Яа-яӨөҮү\s]{3,}" required><br><br>
-                        <label>Хүйс:</label><br>
-                        <input type="radio" id="male" name="gender" value="male" required>
-                        <label for="male">Эрэгтэй</label>
-                        <input type="radio" id="female" name="gender" value="female" required>
-                        <label for="female">Эмэгтэй</label><br><br>
-                        <label for="dob">Төрсөн огноо:</label><br>
-                        <input type="date" id="dob" name="dob" required><br><br>
-                        <label for="phone">Утасны дугаар:</label><br>
-                        <input type="tel" id="phone" name="phone" pattern="[0-9]{8}" placeholder="88112233" required><br><br>
-                        <label for="email">И-мэйл хаяг:</label><br>
-                        <input type="email" id="email" name="email"  placeholder = "example@email.com"required><br><br>
-                        <label for="password">Нууц үг:</label><br>
-                        <input type="password" id="password" name="password" minlength="8" required><br><br>
-                    </fieldset>
-                    <br>
-                    <fieldset>
-                        <legend>Нэмэлт мэдээлэл</legend>
-                        <label for="degree">Боловсролын түвшин:</label><br>
-                        <select id="degree" name="degree" required>
-                            <option value="">-- Сонгоно уу --</option>
-                            <option value="highschool">Бүрэн дунд</option>
-                            <option value="bachelor">Бакалавр</option>
-                            <option value="master">Магистр</option>
-                            <option value="doctor">Доктор</option>
-                        </select><br><br>
-                        <label>Компьютерын ур чадвар:</label><br>
-                        <input type="checkbox" id="c" name="skills" value="Word">
-                        <label for="word">Анхан</label><br>
-                        <input type="checkbox" id="b" name="skills" value="Excel">
-                        <label for="excel">Дунд</label><br>
-                        <input type="checkbox" id="a" name="skills" value="PowerPoint">
-                        <label for="ppt">Ахисан</label><br><br>
-                        <label for="bio">Тайлбар / Өөрийн талаар нэмэлт мэдээлэл оруулна уу:</label><br>
-                        <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Нэмэлт тайлбараа энд бичнэ үү..."></textarea><br>
-                    </fieldset>
-                    <br>
-                    <button type="submit">Анкет Илгээх</button>
-                    <button type="reset">Дахин эхлүүлэх</button>
+                    <div class="fieldset-box">
+                        <div class="box-header">
+                            <span class="badge-main">Нэг. Хувийн мэдээлэл</span>
+                        </div>                        
+                        <div class="box-content">
+                            <div class="form-group">
+                                <label for="avatar">Цээж зураг (4x6 см):</label>
+                                <span class="help-text">Сүүлийн 6 сарын дотор авахуулсан зураг</span>
+                                <input type="file" id="avatar" name="avatar" accept="image/*" class="file-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="register">Регистрийн дугаар:</label>
+                                <input type="text" id="register" name="register" required pattern="[А-Яа-яӨөҮү]{2}[0-9]{8}" placeholder="УУ99010112" class="text-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastname">Эцэг (Эх)-ийн нэр:</label>
+                                <input type="text" id="lastname" name="lastname" minlength="3" pattern="[A-Za-zА-Яа-яӨөҮү\s]{3,}" required class="text-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="firstname">Өөрийн нэр:</label>
+                                <input type="text" id="firstname" name="firstname" minlength="3" pattern="[A-Za-zА-Яа-яӨөҮү\s]{3,}" required class="text-input">
+                            </div>
+                            <div class="form-group">
+                                <label>Хүйс:</label>
+                                <div class="radio-group">
+                                    <input type="radio" id="male" name="gender" value="male" required>
+                                    <label for="male" class="inline-label">Эрэгтэй</label>
+                                    
+                                    <input type="radio" id="female" name="gender" value="female" required>
+                                    <label for="female" class="inline-label">Эмэгтэй</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="dob">Төрсөн огноо:</label>
+                                <input type="date" id="dob" name="dob" required class="text-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Утасны дугаар:</label>
+                                <input type="tel" id="phone" name="phone" pattern="[0-9]{8}" placeholder="88112233" required class="text-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">И-мэйл хаяг:</label>
+                                <input type="email" id="email" name="email" placeholder="example@email.com" required class="text-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Нууц үг:</label>
+                                <input type="password" id="password" name="password" minlength="8" required class="text-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fieldset-box">
+                        <div class="box-header">
+                            <span class="badge-main">Хоёр. Нэмэлт мэдээлэл</span>
+                        </div>
+                        <div class="box-content">
+                            <div class="form-group">
+                                <label for="degree">Боловсролын түвшин:</label>
+                                <select id="degree" name="degree" required class="text-input">
+                                    <option value="">-- Сонгоно уу --</option>
+                                    <option value="highschool">Бүрэн дунд</option>
+                                    <option value="bachelor">Бакалавр</option>
+                                    <option value="master">Магистр</option>
+                                    <option value="doctor">Доктор</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Компьютерын ур чадвар:</label>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="skill_basic" name="skills" value="basic">
+                                    <label for="skill_basic" class="inline-label">Анхан</label><br>  
+                                    <input type="checkbox" id="skill_intermediate" name="skills" value="intermediate">
+                                    <label for="skill_intermediate" class="inline-label">Дунд</label><br>
+                                    <input type="checkbox" id="skill_advanced" name="skills" value="advanced">
+                                    <label for="skill_advanced" class="inline-label">Ахисан</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="bio">Тайлбар / Өөрийн талаар нэмэлт мэдээлэл оруулна уу:</label>
+                                <textarea id="bio" name="bio" rows="4" placeholder="Нэмэлт тайлбараа энд бичнэ үү..." class="text-input"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn-submit">Анкет Илгээх</button>
+                        <button type="reset" class="btn-reset">Дахин эхлүүлэх</button>
+                    </div>
                 </form>
-            </section>
-            <section>
-                <h2>Маягт 2: "Б ХЭСЭГ"</h2>
-                <p>Доорх хэсэгт өөрийн сонирхол, ур чадварын талаарх мэдээллээ оруулна уу.</p>
-            <section>
-                <h2>Миний сонирхол / Ур чадвар</h2>
-                <ul>
-                    <li>Багаар ажиллах чадвар</li>
-                    <li>Гадаад хэл судлах</li>
-                    <li>Баримт бичиг боловсруулах</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Гурав. Боловсролын талаарх мэдээлэл</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Сургуулийн нэр</th>
-                            <th>Элссэн он, сар</th>
-                            <th>Төгссөн он, сар</th>
-                            <th>Эзэмшсэн мэргэжил</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Монгол Улсын Их Сургууль</td>
-                            <td>2016.09</td>
-                            <td>2020.06</td>
-                            <td>Эрх зүйч</td>
-                        </tr>
-                        <tr>
-                            <td>Удирдлагын Академи</td>
-                            <td>2021.09</td>
-                            <td>2023.06</td>
-                            <td>Төрийн удирдлага</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-        </article>
+            </div>
+            <hr class="section-divider">
+            <div class="form-section">
+                <div class="form-title-area">
+                    <h2>Маягт 2: "Б ХЭСЭГ"</h2>
+                    <p class="subtitle">Доорх хэсэгт өөрийн сонирхол, ур чадварын талаарх мэдээллээ оруулна уу.</p>
+                </div>
+                <div class="info-box">
+                    <h3>Миний сонирхол / Ур чадвар</h3>
+                    <ul>
+                        <li>Багаар ажиллах чадвар</li>
+                        <li>Гадаад хэл судлах</li>
+                        <li>Баримт бичиг боловсруулах</li>
+                    </ul>
+                </div>
+                <div class="info-box">
+                    <h3>Гурав. Боловсролын талаарх мэдээлэл</h3>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Сургуулийн нэр</th>
+                                    <th>Элссэн он, сар</th>
+                                    <th>Төгссөн он, сар</th>
+                                    <th>Эзэмшсэн мэргэжил</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Монгол Улсын Их Сургууль</td>
+                                    <td>2016.09</td>
+                                    <td>2020.06</td>
+                                    <td>Эрх зүйч</td>
+                                </tr>
+                                <tr>
+                                    <td>Удирдлагын Академи</td>
+                                    <td>2021.09</td>
+                                    <td>2023.06</td>
+                                    <td>Төрийн удирдлага</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </main>
     <footer>
         <p>&copy; 2026 Бүх эрх хуулиар хамгаалагдсан болно.</p>
