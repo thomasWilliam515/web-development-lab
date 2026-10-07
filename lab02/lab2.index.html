@@ -12,7 +12,7 @@
 <body>
     <header>
         <h1>ТӨРИЙН АЛБАН ХААГЧИЙН АНКЕТ</h1>
-        <nav>
+        <nav aria-label="Үндсэн цэс">
             <ul>
                 <li><a href="#">Нүүр</a></li>
                 <li><a href="#">Анкет засах</a></li>
@@ -21,6 +21,42 @@
         </nav>
     </header>
     <main>
+        <section class="cards-section">
+            <h2 class="section-title">Анкет бөглөх үе шатууд</h2>
+            <p class="subtitle">Анкетыг доорх 6 үе шатын дагуу бүрэн бөглөнө.</p>
+            <div class="card-grid">
+                <article class="card">
+                    <span class="card-number">1</span>
+                    <h3>Хувийн мэдээлэл</h3>
+                    <p>Регистр, нэр, төрсөн огноо болон холбоо барих мэдээллээ оруулна.</p>
+                </article>
+                <article class="card">
+                    <span class="card-number">2</span>
+                    <h3>Боловсрол</h3>
+                    <p>Төгссөн сургууль, эзэмшсэн мэргэжлээ бичнэ.</p>
+                </article>
+                <article class="card">
+                    <span class="card-number">3</span>
+                    <h3>Ажлын туршлага</h3>
+                    <p>Ажилласан байгууллага, албан тушаалаа хугацаатай нь оруулна.</p>
+                </article>
+                <article class="card">
+                    <span class="card-number">4</span>
+                    <h3>Ур чадвар</h3>
+                    <p>Компьютер, гадаад хэл болон бусад чадвараа тодорхойлно.</p>
+                </article>
+                <article class="card">
+                    <span class="card-number">5</span>
+                    <h3>Шагнал, урамшуулал</h3>
+                    <p>Төрийн шагнал, урамшууллын мэдээллээ оруулна.</p>
+                </article>
+                <article class="card">
+                    <span class="card-number">6</span>
+                    <h3>Мэдээллээ нягтлах</h3>
+                    <p>Мэдээллээ нэг дор шалгаад анкетаа илгээнэ.</p>
+                </article>
+            </div>
+        </section>
         <div class="form-container">
             <div class="form-section">
                     <h2>Маягт 1: "А ХЭСЭГ"</h2>
@@ -158,11 +194,34 @@
                     </div>
                 </div>
             </div>
-
         </div>
+            <aside class="sidebar">
+            <section class="widget">
+                <h3>Бөглөх заавар</h3>
+                <ol>
+                    <li>Цээж зургаа хавсаргана.</li>
+                    <li>Регистрийн дугаараа зөв бичнэ.</li>
+                    <li>Бүх талбарыг бүрэн бөглөнө.</li>
+                </ol>
+            </section>
+            <section class="widget">
+                <h3>Холбоо барих</h3>
+                <ul>
+                    <li>Утас: 7000-0000</li>
+                    <li>И-мэйл: info@example.mn</li>
+                    <li>Даваа-Баасан: 09:00-18:00</li>
+                </ul>
+            </section>
+        </aside>
     </main>
     <footer>
         <p>&copy; 2026 Бүх эрх хуулиар хамгаалагдсан болно.</p>
+        <nav aria-label="Footer цэс">
+            <ul>
+                <li><a href="#">Нууцлалын бодлого</a></li>
+                <li><a href="#">Холбоо барих</a></li>
+            </ul>
+        </nav>
     </footer>
 </body>
 </html>
