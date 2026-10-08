@@ -222,7 +222,7 @@ footer a {
     text-decoration: none;
 }
 footer a:hover {
-    color: #ffffff;
+    color: #e41111;
 }
 .cards-section { grid-area: cards; }
 .form-container { grid-area: form; }
@@ -240,7 +240,7 @@ footer a:hover {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 15px;
+    gap: px;
     background-color: #ffffff;
     border: 1px solid #cbd5e1;
     border-left: 4px solid #0e2b7d;
