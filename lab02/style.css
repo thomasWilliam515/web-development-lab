@@ -65,6 +65,7 @@ main {
     color: #64748b;
     font-size: 14px;
     margin-bottom: 20px;
+    font-style: italic;
 }
 .fieldset-box {
     border: 1px solid #cbd5e1;
@@ -233,13 +234,13 @@ footer a:hover {
 .card-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 25px;
 }
 .card {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    gap: 15px;
     background-color: #ffffff;
     border: 1px solid #cbd5e1;
     border-left: 4px solid #0e2b7d;
